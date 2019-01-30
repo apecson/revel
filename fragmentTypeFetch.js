@@ -2,12 +2,12 @@
 
 const fetch = require('node-fetch')
 const fs = require('fs')
-const { REACT_APP_SPACE_ID: SPACE_ID, REACT_APP_ACCESS_TOKEN: ACCESS_TOKEN} = process.env
-const host =`https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}`
+const { REACT_APP_SPACE_ID: SPACE_ID, REACT_APP_ACCESS_TOKEN: ACCESS_TOKEN } = process.env
+const host = `https://graphql.contentful.com/content/v1/spaces/${SPACE_ID}`
 
 fetch(`${host}`, {
   method: 'POST',
-  headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${ACCESS_TOKEN}`},
+  headers: { 'Content-Type': 'application/json', 'Authorization': `Bearer ${ACCESS_TOKEN}` },
   body: JSON.stringify({
     variables: {},
     operationName: '',
